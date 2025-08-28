@@ -77,12 +77,10 @@
 
   programs.git = {
     enable = true;
-    userName = "vadyanik";
-    userEmail = "omletgamer100@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-      pull.rebase = true;
-      core.editor = "nvim";
+    config = {
+      init = {
+        defaultBranch = "main";
+      };
     };
   };
 
@@ -93,7 +91,8 @@
     ghostty
     telegram-desktop
     git
-  ];
+    kdePackages.kate
+];
 
   # Включаем поддержку Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
