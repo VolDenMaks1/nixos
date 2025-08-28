@@ -79,6 +79,8 @@
     enable = true;
     config = {
       init = {
+        userName = "vadyanik";
+        userEmail = "omletgamer100@gmail.com";
         defaultBranch = "main";
       };
     };
