@@ -94,6 +94,7 @@
     telegram-desktop
     git
     kdePackages.kate
+    tor-browser
 ];
 
   # Включаем поддержку Nix Flakes
