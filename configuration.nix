@@ -73,29 +73,12 @@
     packages = with pkgs; [];
   };
 
-  programs.firefox.enable = false;
-
-  programs.git = {
-    enable = true;
-    config = {
-      init = {
-        userName = "vadyanik";
-        userEmail = "omletgamer100@gmail.com";
-        defaultBranch = "main";
-      };
-    };
-  };
+  environment.systemPackages = with pkgs; [
+    home-manager
+  ];
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-    librewolf
-    ghostty
-    telegram-desktop
-    git
-    kdePackages.kate
-    tor-browser
-];
 
   # Включаем поддержку Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
