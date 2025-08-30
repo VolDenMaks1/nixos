@@ -72,13 +72,12 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
-
+  
   environment.systemPackages = with pkgs; [
     home-manager
   ];
 
   nixpkgs.config.allowUnfree = true;
-
 
   # Включаем поддержку Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
