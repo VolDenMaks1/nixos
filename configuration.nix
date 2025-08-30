@@ -26,6 +26,12 @@
     LC_TELEPHONE = "uk_UA.UTF-8";
     LC_TIME = "uk_UA.UTF-8";
   };
+  
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/1dd56c6c-76d8-4891-8de8-d7952760de05"; }
+  ];
+
+  boot.resumeDevice = "/dev/disk/by-uuid/1dd56c6c-76d8-4891-8de8-d7952760de05";
 
   services.xserver.enable = true;
 
