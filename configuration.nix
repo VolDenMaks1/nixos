@@ -56,6 +56,9 @@
     xterm
   ];
 
+  services.flatpak.enable = true;
+
+
   services.xserver.xkb = {
     layout = "us";
     variant = "";
