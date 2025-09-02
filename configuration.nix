@@ -87,6 +87,11 @@
     mullvad-vpn
   ];
 
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [ ];
+  };
+
   services.mullvad-vpn.enable = true;
 
   nixpkgs.config.allowUnfree = true;
