@@ -84,7 +84,10 @@
   
   environment.systemPackages = with pkgs; [
     home-manager
+    mullvad-vpn
   ];
+
+  services.mullvad-vpn.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
