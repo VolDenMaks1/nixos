@@ -2,8 +2,10 @@
   description = "My NixOS config (flake)";
 
   inputs = {
+    # Основная ветка nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
+    # Home Manager
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -12,6 +14,7 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+
         modules = [
           ./configuration.nix
 
@@ -19,14 +22,11 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-
-            home-manager.users.vadyanik = import ./home.nix {
-              pkgs = nixpkgs.legacyPackages.x86_64-linux;
-            };
           }
         ];
       };
     };
   };
 }
+
 
